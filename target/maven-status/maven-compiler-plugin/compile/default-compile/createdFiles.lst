@@ -1,0 +1,5 @@
+com\example\messages\Application.class
+com\example\messages\config\KafkaConfig.class
+com\example\messages\model\Message.class
+com\example\messages\controller\MessageController.class
+com\example\messages\kafka\KafkaProducer.class
