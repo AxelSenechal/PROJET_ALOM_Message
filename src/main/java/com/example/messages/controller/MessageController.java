@@ -19,8 +19,9 @@ public class MessageController {
     private KafkaProducer kafkaProducer;
 
     @PostMapping("/send")
-    public String sendMessage(@RequestBody Message message) throws JsonProcessingException {
+    public Message sendMessage(@RequestBody Message message) throws JsonProcessingException {
         kafkaProducer.sendMessage(message);
-        return "Message envoyé.";
+        message.setContent(message.getContent() + " - sent");
+        return message;
     }
 }
